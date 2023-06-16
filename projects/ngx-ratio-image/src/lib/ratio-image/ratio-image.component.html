@@ -1,0 +1,33 @@
+<div
+	[style.position]="'relative'"
+	[style.z-index]="2"
+	[style.border]="debug ? '1px solid red' : ''"
+	[style.width]="width + 'px'"
+	[style.height]="height + 'px'"
+>
+	<img
+		class="img-background"
+		#img
+		[src]="src"
+		[style.position]="'absolute'"
+		[style.z-index]="1"
+		[style.filter]="'blur(5px)'"
+		[style.opacity]="0.5"
+		[width]="width"
+		[height]="height"
+		[style.overflow]="'hidden'"
+		(load)="onImageLoad(img)"
+		alt=""
+	/>
+	<img
+		class="img-main"
+		[src]="src"
+		[width]="naturalWidth * scale"
+		[height]="naturalHeight * scale"
+		[style.position]="'absolute'"
+		[style.z-index]="2"
+		[style.left]="imageLeft + 'px'"
+		[style.top]="imageTop + 'px'"
+		alt=""
+	/>
+</div>
