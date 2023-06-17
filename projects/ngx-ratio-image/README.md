@@ -1,25 +1,105 @@
-# RatioImage
+# ngx-ratio-image
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+# ngx-ratio-image - an Angular lib to show an image with variable ratio in container with a fixed ratio.
 
-## Code scaffolding
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Available Parameters](#available-parameters)
+- [Demo](#demo)
+- [Contribute](#contribute)
+- [License](#license)
 
-Run `ng generate component component-name --project ratioImage` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ratioImage`.
+## Features
 
-> Note: Don't forget to add `--project ratioImage` or else it will be added to the default project in your `angular.json` file.
+- can display any images in a predefined container
+- black bars are avoided with a blurring effect
+- non stable-phase with versions smaller 1.0.0, please test and feedback
+- tested with Angular 16.1, not working with Angular 15
 
-## Build
+## Installation
 
-Run `ng build ratioImage` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Angular 16.1 with ngx-ratio-image**
 
-## Publishing
+```
+npm ngx-ratio-image --save
+# Or with yarn
+yarn add ngx-ratio-image
+```
 
-After building your library with `ng build ratioImage`, go to the dist folder `cd dist/ratio-image` and run `npm publish`.
+# Usage
 
-## Running unit tests
+### Import the module and add it to your imports section in your main AppModule:
 
-Run `ng test ratioImage` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+// File: app.module.ts
+// all your other imports...
+import { RatioImageModule } from 'ngx-ratio-image';
 
-## Further help
+@NgModule({
+declarations: [
+  AppComponent
+],
+imports: [
+  RatioImageModule
+],
+providers: [],
+bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+// File: app.component.html
+// all your HTML...
+
+<ngx-ratio-image
+	[src]="'https://dummyimage.com/800x600'"
+	[width]="1600"
+	[height]="900"
+></ngx-ratio-image>
+```
+
+## Examples
+
+The source code contains several examples in the folder [`projects/ratio-image-app`](projects/demo-app/src/app) in this repository to show how the output works with different images.
+
+## Available Parameters
+
+| Attribute | Type    | Default | Required | Description                           |
+|-----------|---------|---------|----------|---------------------------------------|
+| src       | string  | ''      | yes      | Allow qrdata to be an empty string    |
+| width     | number  | 0       | yes      | width of the container in pixels      |
+| height    | number  | 0       | yes      | height of the container in pixels     |
+| debug     | boolean | false   | no       | Activate a red border on console text |
+
+
+# Demo
+
+The source for the angular app is available in [`projects/ratio-image-app`](projects/ratio-image-app). Run the command
+
+```
+ng serve ratio-image-app --open
+```
+
+and open the url `http://localhost:4201/` in your browser
+
+## AOT - Ahead Of Time Compilation
+
+AOT Support is not tested, please feed back the result or make a feature request
+
+## SSR - Server Side Rendering
+
+SSR Support is not tested, please feed back the result or make a feature request
+
+## Contribute
+
+- Please open your PR against the main branch.
+- Make sure your editor uses **prettier** to minimize commited code changes.
+
+## License
+
+MIT License
+
+Copyright (c) 2023 - present [Gerd Siebert(gerd.siebert@gmail.com)](mailto:gerd.siebert@gmail.com)

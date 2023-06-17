@@ -1,12 +1,25 @@
 {
-  "name": "ngx-ratio-image",
-  "version": "0.0.1",
-  "peerDependencies": {
-    "@angular/common": "^16.1.0",
-    "@angular/core": "^16.1.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
-  "sideEffects": false
+	"name": "ngx-ratio-image",
+	"version": "0.0.1",
+	"author": {
+		"name": "Gerd Siebert"
+	},
+	"description": "Asn Angular lib to show an image with variable ratio in container with a fixed ratio.",
+	"license": "MIT",
+	"peerDependencies": {
+		"@angular/common": "^16.1.0",
+		"@angular/core": "^16.1.0"
+	},
+	"dependencies": {
+		"tslib": "^2.3.0"
+	},
+	"sideEffects": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gerd-siebert/ngx-ratio-image.git"
+	},
+	"bugs": {
+		"url": "https://github.com/gerd-siebert/ngx-ratio-image/issues"
+	},
+	"homepage": "https://github.com/gerd-siebert/ngx-ratio-image#readme"
 }
