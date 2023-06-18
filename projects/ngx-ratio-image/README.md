@@ -2,21 +2,21 @@
 
 # ngx-ratio-image - an Angular lib to show an image with variable ratio in container with a fixed ratio.
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Available Parameters](#available-parameters)
-- [Demo](#demo)
-- [Contribute](#contribute)
-- [License](#license)
+-   [Features](#features)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Examples](#examples)
+-   [Available Parameters](#available-parameters)
+-   [Demo](#demo)
+-   [Contribute](#contribute)
+-   [License](#license)
 
 ## Features
 
-- can display any images in a predefined container
-- black bars are avoided with a blurring effect
-- non stable-phase with versions smaller 1.0.0, please test and feedback
-- tested with Angular 16.1, not working with Angular 15
+-   can display any images in a predefined container
+-   black bars are avoided with a blurring effect
+-   non stable-phase with versions smaller 1.0.0, please test and feedback
+-   tested with Angular 16.1, not working with Angular 15
 
 ## Installation
 
@@ -63,17 +63,16 @@ export class AppModule { }
 
 ## Examples
 
-The source code contains several examples in the folder [`projects/ratio-image-app`](projects/demo-app/src/app) in this repository to show how the output works with different images.
+The source code contains several examples in the folder [`projects/ratio-image-app`](projects/ratio-image-app/src/app) in this repository to show how the output works with different images.
 
 ## Available Parameters
 
 | Attribute | Type    | Default | Required | Description                           |
-|-----------|---------|---------|----------|---------------------------------------|
+| --------- | ------- | ------- | -------- | ------------------------------------- |
 | src       | string  | ''      | yes      | Allow qrdata to be an empty string    |
 | width     | number  | 0       | yes      | width of the container in pixels      |
 | height    | number  | 0       | yes      | height of the container in pixels     |
 | debug     | boolean | false   | no       | Activate a red border on console text |
-
 
 # Demo
 
@@ -95,8 +94,8 @@ SSR Support is not tested, please feed back the result or make a feature request
 
 ## Contribute
 
-- Please open your PR against the main branch.
-- Make sure your editor uses **prettier** to minimize commited code changes.
+-   Please open your PR against the main branch.
+-   Make sure your editor uses **prettier** to minimize committed code changes.
 
 ## License
 
