@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router} from "@angular/router"; // Need for Router-Outlet etc.
 
 @Component({
 	selector: 'app-root',
@@ -7,7 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'ratioImageApp';
-	image1to1 = 'assets/1to1.jpg';
-	image3to4 = 'assets/3to4.jpg';
-	image4to3 = 'assets/4to3.jpg';
+
 }
