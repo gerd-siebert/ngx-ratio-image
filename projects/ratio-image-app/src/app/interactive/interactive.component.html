@@ -1,7 +1,33 @@
+<h4>Container Height</h4>
+<form>
+	<mat-form-field>
+		<mat-label>Image formats</mat-label>
+		<mat-select [(ngModel)]="selectedContainer" name="container" required>
+			<mat-option *ngFor="let container of containers" [value]="container" >
+				{{container.width}} {{container.height}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+</form>
+<h2>Current container: {{ selectedContainer.viewValue}} ({{ selectedContainer.width}} x {{ selectedContainer.height}})</h2>
+
+<h4>Image</h4>
+<form>
+<mat-form-field>
+	<mat-label>Image formats</mat-label>
+	<mat-select [(ngModel)]="selectedImage" name="image" required>
+		<mat-option *ngFor="let image of images" [value]="image.value" >
+			{{image.viewValue}}
+		</mat-option>
+	</mat-select>
+</mat-form-field>
+</form>
+<h2>Current image: {{ selectedImage}}</h2>
 
 
 <ngx-ratio-image
-	[src]="'https://dummyimage.com/800x600'"
-	[width]="800"
-	[height]="450"
+	[src]="selectedImage"
+	[width]="selectedContainer.width"
+	[height]="selectedContainer.height"
+	[debug]="true"
 ></ngx-ratio-image>
