@@ -31,3 +31,10 @@
 		alt=""
 	/>
 </div>
+<div *ngIf="debug">
+	<div>Container: {{ width}} x {{height}}</div>
+	<div>Natural: {{ naturalWidth}} x {{naturalHeight}}</div>
+	<div>Pos: {{ imageLeft}} , {{imageTop}}</div>
+	<div>Scale: {{ scale }} </div>
+	<div>Ratio Box , Image: {{ this.ratioBox }} : 1 , {{ this.ratioImage }} : 1 </div>
+</div>

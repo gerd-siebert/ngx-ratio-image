@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 
 interface Image {
 	clientWidth: number;
@@ -12,10 +12,10 @@ interface Image {
 	templateUrl: 'ratio-image.component.html',
 	styles: []
 })
-export class RatioImageComponent implements AfterViewInit {
-	@Input({ required: true }) public src = '';
-	@Input({ required: true }) public width = 0;
-	@Input({ required: true }) public height = 0;
+export class RatioImageComponent implements AfterViewInit, OnChanges {
+	@Input({required: true}) public src = '';
+	@Input({required: true}) public width = 0;
+	@Input({required: true}) public height = 0;
 	@Input() public debug = false;
 
 	public imageWidth = 0;
@@ -40,6 +40,7 @@ export class RatioImageComponent implements AfterViewInit {
 			console.log('ngAfterViewInit', this.src, this.width, this.height);
 	}
 
+
 	onImageLoad(img: Image) {
 		if (this.debug) console.log('onImageLoad ', img);
 		if (img) {
@@ -51,6 +52,10 @@ export class RatioImageComponent implements AfterViewInit {
 		}
 	}
 
+	ngOnChanges(changes: SimpleChanges): void {
+		this.calculate();
+	}
+
 	private calculate() {
 		this.ratioImage = this.naturalWidth / this.naturalHeight;
 		this.ratioBox = this.width / this.height;
@@ -58,15 +63,16 @@ export class RatioImageComponent implements AfterViewInit {
 		if (this.ratioBox > this.ratioImage) {
 			this.scale = this.height / this.naturalHeight;
 			this.imageLeft = (this.width - this.naturalWidth * this.scale) / 2;
-		} else {
+		} else if (this.ratioBox < this.ratioImage) {
 			this.scale = this.width / this.naturalWidth;
 			this.imageTop = (this.height - this.naturalHeight * this.scale) / 2;
+		} else {
+			this.scale = this.width / this.naturalWidth;
+			this.imageLeft = 0;
+			this.imageTop = 0;
 		}
-		if (this.debug)
-			console.log(
-				'calculate',
-				this.src,
-				this.naturalWidth + ' x ' + this.naturalHeight
-			);
+
+		if (this.debug) console.log('calculate', this.src, this.naturalWidth + ' x ' + this.naturalHeight);
 	}
+
 }

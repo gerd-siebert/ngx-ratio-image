@@ -18,15 +18,15 @@ interface Container {
 })
 export class InteractiveComponent {
 	images: Image[] = [
-		{value: 'assets/1to1.jpg', viewValue: 'File: 1 : 1'},
 		{value: 'assets/3to4.jpg', viewValue: 'File: 3 : 4'},
 		{value: 'assets/4to3.jpg', viewValue: 'File: 4 : 3'},
+		{value: 'assets/1to1.jpg', viewValue: 'File: 1 : 1'},
 		{value: 'https://dummyimage.com/800x600', viewValue: 'Online: 4:3 '},
 		{value: 'https://dummyimage.com/800x450', viewValue: 'Online: 16:9 '},
 	];
 	containers: Container[] = [
-		{width: 800, height: 600,  viewValue: '800 x 600'},
 		{width: 600, height: 800,  viewValue: '600 x 800'},
+		{width: 800, height: 600,  viewValue: '800 x 600'},
 
 
 	];
