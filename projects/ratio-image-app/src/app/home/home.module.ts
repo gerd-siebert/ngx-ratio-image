@@ -1,13 +1,12 @@
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 
-import {RatioImageModule} from 'ngxRatioImage';
-import {HomeComponent} from "./home.component";
-import {HomeRoutingModule} from "./home-routing.module";
+import { RatioImageModule } from 'ngxRatioImage';
+import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
-	declarations: [ HomeComponent],
-	imports: [ HomeRoutingModule, RatioImageModule],
-	providers: [],
+	declarations: [HomeComponent],
+	imports: [HomeRoutingModule, RatioImageModule],
+	providers: []
 })
-export class HomeModule {
-}
+export class HomeModule {}

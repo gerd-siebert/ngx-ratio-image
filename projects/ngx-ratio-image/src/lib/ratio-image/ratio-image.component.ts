@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 interface Image {
 	clientWidth: number;
@@ -13,9 +13,9 @@ interface Image {
 	styles: []
 })
 export class RatioImageComponent implements AfterViewInit, OnChanges {
-	@Input({required: true}) public src = '';
-	@Input({required: true}) public width = 0;
-	@Input({required: true}) public height = 0;
+	@Input({ required: true }) public src = '';
+	@Input({ required: true }) public width = 0;
+	@Input({ required: true }) public height = 0;
 	@Input() public debug = false;
 
 	public imageWidth = 0;
@@ -36,10 +36,8 @@ export class RatioImageComponent implements AfterViewInit, OnChanges {
 	}
 
 	ngAfterViewInit() {
-		if (this.debug)
-			console.log('ngAfterViewInit', this.src, this.width, this.height);
+		if (this.debug) console.log('ngAfterViewInit', this.src, this.width, this.height);
 	}
-
 
 	onImageLoad(img: Image) {
 		if (this.debug) console.log('onImageLoad ', img);
@@ -74,5 +72,4 @@ export class RatioImageComponent implements AfterViewInit, OnChanges {
 
 		if (this.debug) console.log('calculate', this.src, this.naturalWidth + ' x ' + this.naturalHeight);
 	}
-
 }
