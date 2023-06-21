@@ -9,6 +9,7 @@ on:
 
 env:
     CI: true
+    DISPLAY: ':10.0'
     CHROME_BIN: '/usr/bin/chromium'
 
 jobs:
