@@ -9,8 +9,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { NgForOf } from '@angular/common';
 
-// import {RatioImageModule} from 'ngxRatioImage';
-import { RatioImageModule } from '../../../../ngx-ratio-image/src/lib/ratio-image.module';
+import { RatioImageModule } from 'ngxRatioImage';
+// import { RatioImageModule } from '../../../../ngx-ratio-image/src/lib/ratio-image.module';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({

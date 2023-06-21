@@ -1,8 +1,9 @@
 {
-	"$schema": "./node_modules/ng-packagr/package.schema.json",
 	"name": "ratio-image",
 	"version": "0.0.2",
-	"author": "gerdsiebert",
+	"author": {
+		"name": "Gerd Siebert"
+	},
 	"contributors": [],
 	"repository": {
 		"type": "git",
@@ -20,7 +21,9 @@
 		"ng": "ng",
 		"prettier": "prettier --write \"**/*.{js,json,css,scss,less,md,ts,html,component.html}\"",
 		"start": "ng serve",
-		"build": "ng build",
+		"build": "npm run build:lib && npm run build:lib",
+		"build:lib": "ng build --project ratioImage --configuration production ",
+		"build:app": "ng build --project ratioImageApp --configuration production ",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"lint": "ng lint",
