@@ -10,6 +10,7 @@ on:
 env:
     CI: true
     DISPLAY: :99.0
+    CHROME_BIN: '/usr/bin/chromium'
 
 jobs:
     build:
