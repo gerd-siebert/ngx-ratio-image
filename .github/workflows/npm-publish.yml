@@ -22,6 +22,8 @@ jobs:
                     node-version: 16
             -   run: npm ci
             -   run: npm run build
+            -   name: Setup Chrome
+                uses: browser-actions/setup-chrome@v1.2.0
             -   run: npm test
 
     publish-npm:
