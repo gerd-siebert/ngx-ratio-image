@@ -99,7 +99,7 @@
 		},
 		"ratioImage": {
 			"projectType": "library",
-			"root": "projects/ratio-image",
+			"root": "projects/ngx-ratio-image",
 			"sourceRoot": "projects/ngx-ratio-image/src",
 			"prefix": "lib",
 			"architect": {

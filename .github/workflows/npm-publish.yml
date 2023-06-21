@@ -25,7 +25,7 @@ jobs:
             -   run: npm run build
             -   name: Setup Chrome
                 uses: browser-actions/setup-chrome@v1.2.0
-            -   run: npm test
+            -   run: npm run test:ci
 
     publish-npm:
         needs: build
