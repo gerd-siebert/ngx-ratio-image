@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges } from '@angular/core';
 
 interface Image {
 	clientWidth: number;
@@ -50,7 +50,7 @@ export class RatioImageComponent implements AfterViewInit, OnChanges {
 		}
 	}
 
-	ngOnChanges(changes: SimpleChanges): void {
+	ngOnChanges(): void {
 		this.calculate();
 	}
 

@@ -2,7 +2,8 @@
 	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
 	"version": 1,
 	"cli": {
-		"packageManager": "npm"
+		"packageManager": "npm",
+		"schematicCollections": ["@angular-eslint/schematics"]
 	},
 	"newProjectRoot": "projects",
 	"projects": {
@@ -94,6 +95,12 @@
 						],
 						"scripts": []
 					}
+				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": ["projects/ratio-image-app/**/*.ts", "projects/ratio-image-app/**/*.html"]
+					}
 				}
 			}
 		},
@@ -123,6 +130,12 @@
 					"options": {
 						"tsConfig": "projects/ngx-ratio-image/tsconfig.spec.json",
 						"polyfills": ["zone.js", "zone.js/testing"]
+					}
+				},
+				"lint": {
+					"builder": "@angular-eslint/builder:lint",
+					"options": {
+						"lintFilePatterns": ["projects/ngx-ratio-image/**/*.ts", "projects/ngx-ratio-image/**/*.html"]
 					}
 				}
 			}
