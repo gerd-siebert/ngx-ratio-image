@@ -2,19 +2,24 @@ a {
 	text-decoration: none;
 	color: white;
 }
-a:hover, a:active{
+a:hover,
+a:active {
 	color: lightgray;
 }
-.navigation-items{
+h1 {
+	margin: 5px 16px 5px 5px; ;
+	font-size: 32px;
+}
+.navigation-items {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
-mat-toolbar{
+mat-toolbar {
 	border-radius: 3px;
 }
-@media(max-width: 959px){
-	mat-toolbar{
+@media (max-width: 959px) {
+	mat-toolbar {
 		border-radius: 0;
 	}
 }
