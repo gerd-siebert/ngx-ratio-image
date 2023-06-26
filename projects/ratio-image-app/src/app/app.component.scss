@@ -1,9 +1,23 @@
-button {
+a {
+	color: #c2185b;
+	display: block;
 	font-size: large;
 	padding: 5px;
 	margin: 5px;
-	/*&.active {
+	&.active {
 		font-weight: bolder;
 		background-color: darkgray;
-	}*/
+	}
+	text-decoration: none;
+}
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+	height: 100%;
+	width: 100%;
+}
+mat-sidenav {
+	width: 250px;
+}
+main {
+	padding: 10px;
 }

@@ -1,6 +1,18 @@
-<h1>ngx-ratio-image Test App</h1>
 
-<button [routerLink]="'/'" routerLinkActive="active">Home</button>
-<button routerLink="/interactive" routerLinkActive="active">Interactive</button>
 
-<router-outlet></router-outlet>
+
+
+<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+
+<mat-sidenav-container>
+	<mat-sidenav #sidenav role="navigation" opened="true" >
+		<a [routerLink]="'/'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+		<a routerLink="/interactive" routerLinkActive="active">Interactive</a>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<!--in here all the content must reside. We will add a navigation header as well-->
+		<main>
+			<router-outlet></router-outlet>
+		</main>
+	</mat-sidenav-content>
+</mat-sidenav-container>
