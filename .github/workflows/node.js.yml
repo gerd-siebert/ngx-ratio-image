@@ -6,35 +6,33 @@ name: Node.js CI
 on:
     workflow_dispatch:
     push:
-        branches: [ "main" ]
+        branches: ['main']
     pull_request:
-        branches: [ "main" ]
+        branches: ['main']
 
 env:
     CI: true
     DISPLAY: ':10.0'
     CHROME_BIN: '/usr/bin/chromium'
 
-
 jobs:
     build:
-
         runs-on: ubuntu-latest
         timeout-minutes: 5
         strategy:
             matrix:
-                node-version: [ 16.x, 18.x ]
+                node-version: [16.x, 18.x]
                 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
         steps:
-            -   uses: actions/checkout@v3
-            -   name: Use Node.js ${{ matrix.node-version }}
-                uses: actions/setup-node@v3
-                with:
-                    node-version: ${{ matrix.node-version }}
-                    cache: 'npm'
-            -   name: Setup Chrome
-                uses: browser-actions/setup-chrome@v1.2.0
-            -   run: npm ci
-            -   run: npm run build --if-present
-            -   run: npm run test:ci
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+            - name: Setup Chrome
+              uses: browser-actions/setup-chrome@v1.2.0
+            - run: npm ci
+            - run: npm run build --if-present
+            - run: npm run test:ci
