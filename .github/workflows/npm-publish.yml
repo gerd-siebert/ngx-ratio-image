@@ -23,6 +23,12 @@ jobs:
                   node-version: 16
             - run: npm ci
             - run: npm run build
+            - name: Download a single artifact
+              uses: actions/download-artifact@v3
+              with:
+                  name: ngx-ratio-image
+                  path: dist/ngx-ratio-image
+
             - name: Setup Chrome
               uses: browser-actions/setup-chrome@v1.2.0
             - run: npm run test:ci
