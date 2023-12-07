@@ -44,7 +44,7 @@ jobs:
                     registry-url: https://registry.npmjs.org/
             -   run: npm ci
             -   name: Publish NPM package
-            -   uses: JS-DevTools/npm-publish@v3
+                uses: JS-DevTools/npm-publish@v3
                 with:
                     token: ${{ secrets.npm_token }}
                     registry: "https://registry.npmjs.org/"
