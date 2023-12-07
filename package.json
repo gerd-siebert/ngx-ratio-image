@@ -1,6 +1,6 @@
 {
 	"name": "ngx-ratio-image",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"author": {
 		"name": "Gerd Siebert"
 	},
@@ -13,7 +13,8 @@
 		"Image",
 		"Scaling",
 		"Ratio",
-		"Angular 16"
+		"Angular 16",
+		"Angular 17"
 	],
 	"license": "MIT",
 	"main": "dist/ngx-ratio-image/esm2022/ratio-image.mjs",
