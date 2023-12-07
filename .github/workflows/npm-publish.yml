@@ -24,7 +24,7 @@ jobs:
             -   run: npm ci
             -   run: npm run build
             -   name: Save the Lib dist folder
-                uses: actions/download-artifact@v3
+                uses: actions/upload-artifact@v3
                 with:
                     name: ngx-ratio-image
                     path: dist/ngx-ratio-image
@@ -43,6 +43,7 @@ jobs:
                     node-version: 16
                     registry-url: https://registry.npmjs.org/
             -   run: npm ci
+            -   name: Publish NPM package
             -   uses: JS-DevTools/npm-publish@v3
                 with:
                     token: ${{ secrets.npm_token }}
