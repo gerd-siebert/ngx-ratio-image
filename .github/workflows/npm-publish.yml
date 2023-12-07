@@ -43,6 +43,7 @@ jobs:
                     node-version: 16
                     registry-url: https://registry.npmjs.org/
             -   run: npm ci
+            -   run: npm run build
             -   name: Publish NPM package
                 uses: JS-DevTools/npm-publish@v3
                 with:
