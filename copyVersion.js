@@ -26,7 +26,7 @@ function incrementVersion(version) {
 function copyVersions() {
 	// Haupt-package.json lesen und Version hochsetzen
 	const mainPackageJson = readPackageJson(mainPackagePath);
-	const newVersion = incrementVersion(mainPackageJson.version);
+	const newVersion = mainPackageJson.version;
 
 	// lib/package.json lesen und Version synchronisieren
 	const libPackageJson = readPackageJson(libPackagePath);
