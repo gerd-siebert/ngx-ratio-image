@@ -3,7 +3,7 @@ const path = require('path');
 
 // Pfade zu den package.json-Dateien
 const mainPackagePath = path.join(__dirname, 'package.json');
-const libPackagePath = path.join(__dirname, 'projects', 'ngx-radio-image', 'package.json');
+const libPackagePath = path.join(__dirname, 'projects', 'ngx-ratio-image', 'package.json');
 
 // Funktion zum Lesen und Parsen der package.json-Dateien
 function readPackageJson(filePath) {
