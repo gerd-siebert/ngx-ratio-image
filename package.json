@@ -32,7 +32,8 @@
 		"test:ci": "ng test --code-coverage --no-watch --browsers=ChromeHeadless --source-map=false",
 		"lint": "ng lint",
 		"packagr": "ng-packagr -p ng-package.json",
-		"publish": "rm -rf node_modules && npm install && npm run build && cd dist/ngx-ratio-image && npm publish && cd ../../"
+		"publish": "rm -rf node_modules && npm install && npm run build && cd dist/ngx-ratio-image && npm publish && cd ../../",
+		"postversion": "node copyVersion.js"
 	},
 	"private": false,
 	"dependencies": {
