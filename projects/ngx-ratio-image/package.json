@@ -9,13 +9,14 @@
 		"Scaling",
 		"Ratio",
 		"Angular 16",
-		"Angular 17"
+		"Angular 17",
+		"Angular 18"
 	],
 	"description": "Asn Angular lib to show an image with variable ratio in container with a fixed ratio.",
 	"license": "MIT",
 	"peerDependencies": {
-		"@angular/common": "^16.0.0 || ^17.0.0",
-		"@angular/core": "^16.0.0 || ^17.0.0"
+		"@angular/common": "^16.0.0 || ^17.0.0 || ^18.0.0",
+		"@angular/core": "^16.0.0 || ^17.0.0 || ^18.0.0"
 	},
 	"dependencies": {
 		"tslib": "^2.3.0"

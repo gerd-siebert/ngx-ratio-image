@@ -14,7 +14,8 @@
 		"Scaling",
 		"Ratio",
 		"Angular 16",
-		"Angular 17"
+		"Angular 17",
+		"Angular 18"
 	],
 	"license": "MIT",
 	"main": "dist/ngx-ratio-image/esm2022/ratio-image.mjs",
