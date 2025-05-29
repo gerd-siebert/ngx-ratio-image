@@ -15,7 +15,9 @@
 		"Ratio",
 		"Angular 16",
 		"Angular 17",
-		"Angular 18"
+		"Angular 18",
+		"Angular 19",
+		"Angular 20"
 	],
 	"license": "MIT",
 	"main": "dist/ngx-ratio-image/esm2022/ratio-image.mjs",
