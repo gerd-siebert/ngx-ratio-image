@@ -24,7 +24,7 @@ jobs:
             -   run: npm ci
             -   run: npm run build
             -   name: Save the Lib dist folder
-                uses: actions/upload-artifact@v3
+                uses: actions/upload-artifact@v7.0.1
                 with:
                     name: ngx-ratio-image
                     path: dist/ngx-ratio-image
