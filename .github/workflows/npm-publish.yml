@@ -14,7 +14,7 @@ env:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         timeout-minutes: 10
         steps:
             -   uses: actions/checkout@v3
@@ -30,7 +30,7 @@ jobs:
                     path: dist/ngx-ratio-image
 
             -   name: Setup Chrome
-                uses: browser-actions/setup-chrome@v1.2.0
+                uses: browser-actions/setup-chrome@v1.7.3
             -   run: npm run test:ci
 
     publish-npm:
