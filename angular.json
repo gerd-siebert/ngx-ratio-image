@@ -72,11 +72,11 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-						"production": {
-							"browserTarget": "ratioImageApp:build:production"
+            "production": {
+              "buildTarget": "ratioImageApp:build:production"
 						},
-						"development": {
-							"browserTarget": "ratioImageApp:build:development"
+            "development": {
+              "buildTarget": "ratioImageApp:build:development"
 						}
 					},
 					"options": {
@@ -86,8 +86,8 @@
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "ratioImageApp:build"
+          "options": {
+            "buildTarget": "ratioImageApp:build"
 					}
 				},
 				"test": {
