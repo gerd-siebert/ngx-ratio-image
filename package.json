@@ -7,7 +7,7 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gerd-siebert/ngx-ratio-image"
+    "url": "git+https://github.com/gerd-siebert/ngx-ratio-image.git"
   },
   "keywords": [
     "Image",
