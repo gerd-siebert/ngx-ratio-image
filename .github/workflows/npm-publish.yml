@@ -26,6 +26,7 @@ jobs:
             - run: npm ci
             - run: npm run build
 
+            # Das gebaute Paket temporär zwischenspeichern
             - name: Save the Lib dist folder
               uses: actions/upload-artifact@v4
               with:
@@ -42,15 +43,23 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 20
                   registry-url: https://registry.npmjs.org/
-            - run: npm ci
-            - run: npm run build
+
+            # Holt das fertige Build-Ergebnis aus dem "build"-Job ab
+            - name: Download Built Package
+              uses: actions/download-artifact@v4
+              with:
+                  name: ngx-ratio-image
+                  path: dist/ngx-ratio-image
+
+            # Veröffentlicht das Paket mit korrekt geschriebenem Secret
             - name: Publish NPM package
               uses: JS-DevTools/npm-publish@v3
               with:
-                  token: ${{ secrets.npm_token }}
+                  token: ${{ secrets.NPM_TOKEN }} # <-- Hier korrigiert auf GROSSSCHREIBUNG
                   package: "dist/ngx-ratio-image"
