@@ -55,11 +55,10 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: ngx-ratio-image
-                  path: dist/ngx-ratio-image
+                  path: ./dist-package
 
             # Veröffentlicht das Paket mit korrekt geschriebenem Secret
-            - name: Publish NPM package
-              uses: JS-DevTools/npm-publish@v3
-              with:
-                  token: ${{ secrets.NPM_TOKEN }} # <-- Hier korrigiert auf GROSSSCHREIBUNG
-                  package: "dist/ngx-ratio-image"
+            -   name: Publish to NPM
+                run: npm publish ./dist-package
+                env:
+                 NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
