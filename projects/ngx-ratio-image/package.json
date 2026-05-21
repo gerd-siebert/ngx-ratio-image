@@ -1,34 +1,35 @@
 {
-  "name": "ngx-ratio-image",
-  "version": "0.1.0",
-  "author": {
-    "name": "Gerd Siebert"
-  },
-  "keywords": [
-    "Image",
-    "Scaling",
-    "Ratio",
-    "Angular 17",
-    "Angular 18",
-    "Angular 19",
-    "Angular 20"
-  ],
-  "description": "An Angular lib to show an image with variable ratio in container with a fixed ratio.",
-  "license": "MIT",
-  "peerDependencies": {
-    "@angular/common": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0",
-    "@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gerd-siebert/ngx-ratio-image.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gerd-siebert/ngx-ratio-image/issues"
-  },
-  "homepage": "https://github.com/gerd-siebert/ngx-ratio-image#readme"
+	"name": "ngx-ratio-image",
+	"version": "0.1.1",
+	"author": {
+		"name": "Gerd Siebert"
+	},
+	"keywords": [
+		"Image",
+		"Scaling",
+		"Ratio",
+		"Angular 17",
+		"Angular 18",
+		"Angular 19",
+		"Angular 20",
+		"Angular 21"
+	],
+	"description": "An Angular lib to show an image with variable ratio in container with a fixed ratio.",
+	"license": "MIT",
+	"peerDependencies": {
+		"@angular/common": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0",
+		"@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0"
+	},
+	"dependencies": {
+		"tslib": "^2.3.0"
+	},
+	"sideEffects": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gerd-siebert/ngx-ratio-image.git"
+	},
+	"bugs": {
+		"url": "https://github.com/gerd-siebert/ngx-ratio-image/issues"
+	},
+	"homepage": "https://github.com/gerd-siebert/ngx-ratio-image#readme"
 }
