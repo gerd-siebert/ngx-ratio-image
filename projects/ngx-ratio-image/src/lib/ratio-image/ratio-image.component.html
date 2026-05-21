@@ -1,42 +1,44 @@
 <div
-	[style.position]="'relative'"
-	[style.z-index]="2"
-	[style.border]="debug ? '1px solid red' : ''"
-	[style.width]="width + 'px'"
-	[style.height]="height + 'px'"
->
-	<img
-		class="img-background"
-		#img
-		[src]="src"
-		[style.position]="'absolute'"
-		[style.z-index]="1"
-		[style.filter]="'blur(5px)'"
-		[style.opacity]="0.5"
-		[width]="width"
-		[height]="height"
-		[style.overflow]="'hidden'"
-		(load)="onImageLoad(img)"
-		alt=""
-	/>
-	<img
-		class="img-main"
-		[src]="src"
-		[width]="naturalWidth * scale"
-		[height]="naturalHeight * scale"
-		[style.position]="'absolute'"
-		[style.z-index]="2"
-		[style.left]="imageLeft + 'px'"
-		[style.top]="imageTop + 'px'"
-		alt=""
-	/>
+  [style.position]="'relative'"
+  [style.z-index]="2"
+  [style.border]="debug ? '1px solid red' : ''"
+  [style.width]="width + 'px'"
+  [style.height]="height + 'px'"
+  >
+  <img
+    class="img-background"
+    #img
+    [src]="src"
+    [style.position]="'absolute'"
+    [style.z-index]="1"
+    [style.filter]="'blur(5px)'"
+    [style.opacity]="0.5"
+    [width]="width"
+    [height]="height"
+    [style.overflow]="'hidden'"
+    (load)="onImageLoad(img)"
+    alt=""
+    />
+  <img
+    class="img-main"
+    [src]="src"
+    [width]="naturalWidth * scale"
+    [height]="naturalHeight * scale"
+    [style.position]="'absolute'"
+    [style.z-index]="2"
+    [style.left]="imageLeft + 'px'"
+    [style.top]="imageTop + 'px'"
+    alt=""
+    />
 </div>
-<div *ngIf="debug" style="margin-top: 10px">
-	<div>Container: {{ width }} x {{ height }}</div>
-	<div>Natural: {{ naturalWidth }} x {{ naturalHeight }}</div>
-	<div>Pos: {{ imageLeft }} , {{ imageTop }}</div>
-	<div>Scale: {{ scale | number: '0.0-2' }}</div>
-	<div>
-		Ratio Box , Image: {{ this.ratioBox | number: '0.0-2' }} : 1 , {{ this.ratioImage | number: '0.0-2' }} : 1
-	</div>
-</div>
+@if (debug) {
+  <div style="margin-top: 10px">
+    <div>Container: {{ width }} x {{ height }}</div>
+    <div>Natural: {{ naturalWidth }} x {{ naturalHeight }}</div>
+    <div>Pos: {{ imageLeft }} , {{ imageTop }}</div>
+    <div>Scale: {{ scale | number: '0.0-2' }}</div>
+    <div>
+      Ratio Box , Image: {{ this.ratioBox | number: '0.0-2' }} : 1 , {{ this.ratioImage | number: '0.0-2' }} : 1
+    </div>
+  </div>
+}

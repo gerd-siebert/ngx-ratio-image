@@ -23,8 +23,8 @@ jobs:
                   node-version: 20
                   cache: 'npm'
 
-            - run: npm ci
-            - run: npm run build
+            -   run: npm ci
+            -   run: npm run build
 
             # Das gebaute Paket temporär zwischenspeichern
             - name: Save the Lib dist folder
@@ -58,7 +58,7 @@ jobs:
                   path: ./dist-package
 
             # Veröffentlicht das Paket mit korrekt geschriebenem Secret
-            -   name: Publish to NPM
-                run: npm publish ./dist-package
-                env:
-                 NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Publish to NPM
+              run: npm publish ./dist-package
+              env:
+                NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
