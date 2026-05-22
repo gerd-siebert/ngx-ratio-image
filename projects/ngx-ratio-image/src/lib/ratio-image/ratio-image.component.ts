@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, Input, OnChanges } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 
 interface Image {
 	clientWidth: number;
@@ -10,7 +11,9 @@ interface Image {
 @Component({
 	selector: 'ngx-ratio-image',
 	templateUrl: 'ratio-image.component.html',
-	styles: []
+	styles: [],
+	standalone: true,
+	imports: [DecimalPipe]
 })
 export class RatioImageComponent implements AfterViewInit, OnChanges {
 	@Input({ required: true }) public src = '';

@@ -10,14 +10,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { NgForOf } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-import { RatioImageModule } from 'ngxRatioImage';
-/// import { RatioImageModule } from '../../../../ngx-ratio-image/src/lib/ratio-image.module';
+import { RatioImageComponent } from 'ngxRatioImage';
+
 
 @NgModule({
 	declarations: [InteractiveComponent],
 	imports: [
 		InteractiveRoutingModule,
-		RatioImageModule,
+		RatioImageComponent,
 		MatFormFieldModule,
 		MatInputModule,
 		FormsModule,

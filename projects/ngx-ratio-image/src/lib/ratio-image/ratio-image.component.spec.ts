@@ -8,7 +8,7 @@ describe('RatioImageComponent', () => {
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({
-			declarations: [RatioImageComponent]
+			imports: [RatioImageComponent]
 		});
 		fixture = TestBed.createComponent(RatioImageComponent);
 		component = fixture.componentInstance;

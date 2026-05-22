@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 
-import { RatioImageModule } from 'ngxRatioImage';
-//  import { RatioImageModule } from '../../../../ngx-ratio-image/src/lib/ratio-image.module';
+import { RatioImageComponent } from 'ngxRatioImage';
+//  import { import { RatioImageComponent } from 'ngxRatioImage'; } from '../../../../ngx-ratio-image/src/lib/ratio-image.component';
 
 @NgModule({
 	declarations: [HomeComponent],
-	imports: [HomeRoutingModule, RatioImageModule],
+	imports: [HomeRoutingModule, RatioImageComponent],
 	providers: []
 })
 export class HomeModule {}

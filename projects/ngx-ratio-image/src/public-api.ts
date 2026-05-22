@@ -3,4 +3,3 @@
  */
 
 export * from './lib/ratio-image/ratio-image.component';
-export * from './lib/ratio-image.module';
