@@ -1,34 +1,45 @@
 {
-  "name": "ngx-ratio-image",
-  "version": "0.1.3",
-  "author": {
-    "name": "Gerd Siebert"
-  },
-  "keywords": [
-    "Image",
-    "Scaling",
-    "Ratio",
-    "Angular 18",
-    "Angular 19",
-    "Angular 20",
-    "Angular 21"
-  ],
-  "description": "An Angular lib to show an image with variable ratio in container with a fixed ratio.",
-  "license": "MIT",
-  "peerDependencies": {
-    "@angular/common": "^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0",
-    "@angular/core": "^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gerd-siebert/ngx-ratio-image.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gerd-siebert/ngx-ratio-image/issues"
-  },
-  "homepage": "https://github.com/gerd-siebert/ngx-ratio-image#readme"
+	"name": "ngx-ratio-image",
+	"version": "0.1.4",
+	"author": {
+		"name": "Gerd Siebert"
+	},
+	"keywords": [
+		"Image",
+		"Scaling",
+		"Ratio",
+		"Angular 18",
+		"Angular 19",
+		"Angular 20",
+		"Angular 21"
+	],
+	"description": "An Angular lib to show an image with variable ratio in container with a fixed ratio.",
+	"license": "MIT",
+	"peerDependencies": {
+		"@angular/common": "^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0",
+		"@angular/core": "^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0"
+	},
+	"dependencies": {
+		"tslib": "^2.3.0"
+	},
+	"sideEffects": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gerd-siebert/ngx-ratio-image.git"
+	},
+	"bugs": {
+		"url": "https://github.com/gerd-siebert/ngx-ratio-image/issues"
+	},
+	"homepage": "https://github.com/gerd-siebert/ngx-ratio-image#readme",
+	"main": "fesm2022/ngx-ratio-image.mjs",
+	"typings": "index.d.ts",
+	"module": "fesm2022/ngx-ratio-image.mjs",
+	"es2022": "fesm2022/ngx-ratio-image.mjs",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"esm2022": "./esm2022/ngx-ratio-image.mjs",
+			"default": "./fesm2022/ngx-ratio-image.mjs"
+		}
+	}
 }
