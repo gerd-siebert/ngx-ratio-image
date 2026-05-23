@@ -35,7 +35,7 @@
 		"lint": "ng lint",
 		"packagr": "ng-packagr -p ng-package.json",
 		"publish": "rm -rf node_modules && npm install && npm run build && cd dist/ngx-ratio-image && npm publish && cd ../../",
-		"version": "node ./copyVersion.js && npm pkg fix && git add projects/ngx-ratio-image/package.json && npm i --prefix projects/ngx-ratio-image",
+		"version": "node ./copyVersion.js && npm pkg fix && npm i --prefix projects/ngx-ratio-image && git add projects/ngx-ratio-image/package.json projects/ngx-ratio-image/package-lock.json",
 		"prepare": "husky"
 	},
 	"private": false,
