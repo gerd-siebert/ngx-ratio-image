@@ -22,11 +22,12 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/ratio-image-app",
-						"index": "projects/ratio-image-app/src/index.html",
-						"main": "projects/ratio-image-app/src/main.ts",
+						"outputPath": {
+              "base": "dist/ratio-image-app"
+            },
+            "index": "projects/ratio-image-app/src/index.html",
 						"polyfills": [
 							"zone.js"
 						],
@@ -40,7 +41,8 @@
 							"@angular/material/prebuilt-themes/pink-bluegrey.css",
 							"projects/ratio-image-app/src/styles.scss"
 						],
-						"scripts": []
+            "scripts": [],
+            "browser": "projects/ratio-image-app/src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -58,10 +60,8 @@
 							],
 							"outputHashing": "all"
 						},
-						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
+            "development": {
+              "optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true,
 							"namedChunks": true

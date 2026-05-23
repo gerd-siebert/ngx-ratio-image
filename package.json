@@ -1,11 +1,11 @@
 {
 	"name": "ngx-ratio-image",
-	"version": "0.1.5",
+	"version": "0.1.6-0",
 	"author": {
 		"name": "Gerd Siebert"
 	},
 	"engines": {
-		"node": "^18.13.0 || ^20.9.0"
+		"node": "^18.19.1 || ^20.11.1 || ^22.0.0"
 	},
 	"repository": {
 		"type": "git",
@@ -15,7 +15,6 @@
 		"Image",
 		"Scaling",
 		"Ratio",
-		"Angular 18",
 		"Angular 19",
 		"Angular 20",
 		"Angular 21"
@@ -36,34 +35,34 @@
 		"lint": "ng lint",
 		"packagr": "ng-packagr -p ng-package.json",
 		"publish": "rm -rf node_modules && npm install && npm run build && cd dist/ngx-ratio-image && npm publish && cd ../../",
-		"postversion": "node ./copyVersion.js && npm pkg fix",
+		"version": "node ./copyVersion.js && npm pkg fix && npm i --prefix projects/ngx-ratio-image && git add projects/ngx-ratio-image/package.json projects/ngx-ratio-image/package-lock.json",
 		"prepare": "husky"
 	},
 	"private": false,
 	"dependencies": {
-		"@angular/animations": "18.2.14",
-		"@angular/cdk": "18.2.14",
-		"@angular/common": "18.2.14",
-		"@angular/compiler": "18.2.14",
-		"@angular/core": "18.2.14",
-		"@angular/forms": "18.2.14",
-		"@angular/material": "18.2.14",
-		"@angular/platform-browser": "18.2.14",
-		"@angular/platform-browser-dynamic": "18.2.14",
-		"@angular/router": "18.2.14",
+		"@angular/animations": "19.2.22",
+		"@angular/cdk": "19.2.19",
+		"@angular/common": "19.2.22",
+		"@angular/compiler": "19.2.22",
+		"@angular/core": "19.2.22",
+		"@angular/forms": "19.2.22",
+		"@angular/material": "19.2.19",
+		"@angular/platform-browser": "19.2.22",
+		"@angular/platform-browser-dynamic": "19.2.22",
+		"@angular/router": "19.2.22",
 		"rxjs": "~7.8.0",
 		"tslib": "^2.3.0",
-		"zone.js": "~0.14.10"
+		"zone.js": "~0.15.1"
 	},
 	"devDependencies": {
-		"@angular-devkit/build-angular": "18.2.21",
+		"@angular-devkit/build-angular": "19.2.26",
 		"@angular-eslint/builder": "18.4.3",
 		"@angular-eslint/eslint-plugin": "18.4.3",
 		"@angular-eslint/eslint-plugin-template": "18.4.3",
 		"@angular-eslint/schematics": "18.4.3",
 		"@angular-eslint/template-parser": "18.4.3",
-		"@angular/cli": "18.2.21",
-		"@angular/compiler-cli": "18.2.14",
+		"@angular/cli": "19.2.26",
+		"@angular/compiler-cli": "19.2.22",
 		"@schuchard/prettier": "5.1.0",
 		"@types/jasmine": "~4.3.0",
 		"@types/node": "20.19.41",
@@ -77,9 +76,9 @@
 		"karma-coverage": "~2.2.0",
 		"karma-jasmine": "~5.1.0",
 		"karma-jasmine-html-reporter": "~2.1.0",
-		"lint-staged": "latest",
-		"ng-packagr": "^18.2.1",
-		"prettier": "^2.8.8",
+		"lint-staged": "15.5.2",
+		"ng-packagr": "19.2.2",
+		"prettier": "2.8.8",
 		"rimraf": "^5.0.1",
 		"tslint-config-prettier": "latest",
 		"typescript": "5.5.4"

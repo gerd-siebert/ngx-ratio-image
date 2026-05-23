@@ -13,7 +13,8 @@ interface Container {
 @Component({
 	selector: 'app-interactive',
 	templateUrl: './interactive.component.html',
-	styleUrls: ['./interactive.component.scss']
+	styleUrls: ['./interactive.component.scss'],
+	standalone: false
 })
 export class InteractiveComponent {
 	images: Image[] = [
