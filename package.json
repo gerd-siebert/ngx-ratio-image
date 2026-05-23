@@ -5,7 +5,7 @@
 		"name": "Gerd Siebert"
 	},
 	"engines": {
-		"node": "^18.13.0 || ^20.9.0"
+		"node": "^18.19.1 || ^20.11.1 || ^22.0.0"
 	},
 	"repository": {
 		"type": "git",
@@ -15,7 +15,6 @@
 		"Image",
 		"Scaling",
 		"Ratio",
-		"Angular 18",
 		"Angular 19",
 		"Angular 20",
 		"Angular 21"
