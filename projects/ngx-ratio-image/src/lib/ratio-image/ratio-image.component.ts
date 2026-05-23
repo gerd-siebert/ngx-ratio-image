@@ -12,7 +12,6 @@ interface Image {
 	selector: 'ngx-ratio-image',
 	templateUrl: 'ratio-image.component.html',
 	styles: [],
-	standalone: true,
 	imports: [DecimalPipe]
 })
 export class RatioImageComponent implements AfterViewInit, OnChanges {
