@@ -1,6 +1,6 @@
 {
   "name": "ngx-ratio-image",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "author": {
     "name": "Gerd Siebert"
   },
@@ -14,7 +14,7 @@
   "description": "An Angular lib to show an image with variable ratio in container with a fixed ratio.",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common":"^20.0.0 || ^21.0.0",
+    "@angular/common": "^20.0.0 || ^21.0.0",
     "@angular/core": "^20.0.0 || ^21.0.0"
   },
   "dependencies": {
