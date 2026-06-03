@@ -19,13 +19,13 @@
 -   can display any images in a predefined container
 -   black bars are avoided with a blurring effect
 -   non stable-phase with versions smaller 1.0.0, please test and feedback
--   build with Angular 20.2, runs up to Angular 21 
+-   build with Angular 20.3, runs up to Angular 21 
     Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Installation
 ## Code scaffolding
 
-**Angular 20.2 with ngx-ratio-image**
+**Angular 20.3 with ngx-ratio-image**
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ```
