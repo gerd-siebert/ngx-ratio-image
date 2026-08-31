@@ -12,7 +12,6 @@
 		"build:lib": "npm run build --workspace=main"
 	},
 	"dependencies": {
-		"@angular/animations": "21.2.18"
 	},
 	"devDependencies": {
 		"rimraf": "6.1.3"
