@@ -3,7 +3,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "ngx-ratio-image": ["../main/projects/ngx-ratio-image/src/public-api.ts"]
     },
