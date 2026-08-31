@@ -1,0 +1,9 @@
+<app-header (sidenavToggle)="sidenav.toggle()" />
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation" [opened]="!isHandset()" [mode]="isHandset() ? 'over' : 'side'">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/interactive" routerLinkActive="active">Interactive</a>
+  </mat-sidenav>
+  <mat-sidenav-content><main><router-outlet /></main></mat-sidenav-content>
+</mat-sidenav-container>
