@@ -9,6 +9,7 @@
 	"scripts": {
 		"start:main": "npm start --workspace=main",
 		"start:testing-app": "npm start --workspace=testing-app",
+		"prebuild:lib": "npm --prefix main run prebuild",
 		"build:lib": "npm run build:lib --workspace=main",
 		"build:testing-app": "npm run build --workspace=testing-app",
 		"build": "npm run build:testing-app",

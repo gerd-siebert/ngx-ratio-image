@@ -33,7 +33,7 @@
 		"test:ci": "npm run ng -- test --code-coverage --no-watch --browsers=ChromeHeadless --source-map=false",
 		"lint": "npm run ng -- lint",
 		"packagr": "ng-packagr -p ng-package.json",
-		"publish": "npm run build:lib && npm publish ./dist/ngx-ratio-image",
+		"publish": "npm run prebuild && npm run build:lib && npm publish ./dist/ngx-ratio-image",
 		"version": "node ./copyVersion.js && npm pkg fix && npm i --prefix projects/ngx-ratio-image && git add projects/ngx-ratio-image/package.json projects/ngx-ratio-image/package-lock.json",
 		"prepare": "husky"
 	},
