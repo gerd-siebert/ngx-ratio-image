@@ -17,7 +17,7 @@
 		"moduleResolution": "bundler",
 		"importHelpers": true,
 		"paths": {
-			"ngxRatioImage": ["dist/ngx-ratio-image"]
+			"ngxRatioImage": ["projects/ngx-ratio-image/src/public-api.ts"]
 		},
 		"target": "ES2022",
 		"module": "ES2022",
@@ -31,8 +31,7 @@
 		"strictTemplates": true
 	},
 	"typeRoots": [
-		"./node_modules/@types",
-		"../node_modules/@types"
+		"./node_modules/@types"
 	],
-	"preserveSymlinks": true
+	"preserveSymlinks": false
 }
