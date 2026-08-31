@@ -24,14 +24,17 @@ jobs:
                   cache: 'npm'
 
             -   run: npm ci
-            -   run: npm run build
+            -   run: npm run build:lib
+
+            - name: Verify built package
+              run: test -f main/dist/ngx-ratio-image/package.json
 
             # Das gebaute Paket temporär zwischenspeichern
             - name: Save the Lib dist folder
               uses: actions/upload-artifact@v4
               with:
                   name: ngx-ratio-image
-                  path: dist/ngx-ratio-image
+                  path: main/dist/ngx-ratio-image
 
             - name: Setup Chrome
               uses: browser-actions/setup-chrome@v1
@@ -49,7 +52,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: 20
+                  node-version: 24
                   registry-url: https://registry.npmjs.org/
 
             # Holt das fertige Build-Ergebnis aus dem "build"-Job ab
