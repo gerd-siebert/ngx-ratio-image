@@ -9,13 +9,14 @@
     "Scaling",
     "Ratio",
     "Angular 20",
-    "Angular 21"
+    "Angular 21",
+    "Angular 22"
   ],
   "description": "An Angular lib to show an image with variable ratio in container with a fixed ratio.",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^20.0.0 || ^21.0.0 || ^22.0.0",
-    "@angular/core": "^20.0.0 || ^21.0.0 || ^22.0.0"
+    "@angular/common": "^21.0.0 || ^22.0.0",
+    "@angular/core": "^21.0.0 || ^22.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
