@@ -1,6 +1,6 @@
 # AGENTS.md - Project Overview
 
-- **Framework:** Angular 20+ (Standalone Components & Signals)
+- **Framework:** Angular 21+ (Standalone Components & Signals)
 - **Language:** TypeScript (strict mode)
 - **State:** Signals for UI state, RxJS for Async/HTTP streams
 - **Styling:** SCSS / Tailwind
