@@ -1,6 +1,6 @@
 {
 	"name": "my-monorepo-root",
-	"version": "1.0.0",
+	"version": "0.2.0",
 	"private": true,
 	"workspaces": [
 		"main",
@@ -15,8 +15,7 @@
 		"build": "npm run build:testing-app",
 		"test:ci": "npm run test:ci --workspace=main"
 	},
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"rimraf": "6.1.3"
 	}

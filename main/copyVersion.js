@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Pfade zu den package.json-Dateien
+const rootPackagePath = path.join(__dirname, '..', 'package.json');
 const mainPackagePath = path.join(__dirname, 'package.json');
 const libPackagePath = path.join(__dirname, 'projects', 'ngx-ratio-image', 'package.json');
 
@@ -10,30 +11,42 @@ function readPackageJson(filePath) {
 	return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
-// Funktion zum Schreiben der aktualisierten package.json-Dateien
-function writePackageJson(filePath, data) {
-	fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+// Funktion zum Erkennen der Einrückung (Tabs vs. Spaces)
+function getIndentation(content) {
+	return content.includes('\n\t') ? '\t' : 2;
 }
 
-// Funktion zur Erhöhung der Version
-function incrementVersion(version) {
-	const versionParts = version.split('.').map(Number);
-	versionParts[2] += 1; // Patch-Version erhöhen
-	return versionParts.join('.');
+// Funktion zum Schreiben der aktualisierten package.json-Dateien
+function writePackageJson(filePath, data) {
+	const currentContent = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : '';
+	const indent = getIndentation(currentContent);
+	fs.writeFileSync(filePath, JSON.stringify(data, null, indent) + '\n', 'utf8');
 }
 
 // Hauptlogik
 function copyVersions() {
-	// Haupt-package.json lesen und Version hochsetzen
-	const mainPackageJson = readPackageJson(mainPackagePath);
-	const newVersion = mainPackageJson.version;
+	// Root-package.json lesen
+	const rootPackageJson = readPackageJson(rootPackagePath);
+	const newVersion = rootPackageJson.version;
+
+	if (!newVersion) {
+		console.error('No version found in root package.json!');
+		process.exit(1);
+	}
 
 	// lib/package.json lesen und Version synchronisieren
 	const libPackageJson = readPackageJson(libPackagePath);
 	libPackageJson.version = newVersion;
 	writePackageJson(libPackagePath, libPackageJson);
 
-	console.log(`Version updated to ${newVersion} in both package.json files.`);
+	// main/package.json lesen und Version synchronisieren
+	if (fs.existsSync(mainPackagePath)) {
+		const mainPackageJson = readPackageJson(mainPackagePath);
+		mainPackageJson.version = newVersion;
+		writePackageJson(mainPackagePath, mainPackageJson);
+	}
+
+	console.log(`Version updated to ${newVersion} in package.json files.`);
 }
 
 // Skript ausführen
