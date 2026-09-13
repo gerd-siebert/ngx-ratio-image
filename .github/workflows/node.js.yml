@@ -7,6 +7,9 @@ on:
     workflow_dispatch:
     push:
     pull_request:
+    schedule:
+        # Jeden Sonntag um 00:00 UTC ausführen
+        - cron: '0 0 * * 0'
 
 env:
     CI: true
