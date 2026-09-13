@@ -24,7 +24,7 @@
 		"ng": "../node_modules/.bin/ng",
 		"prettier": "prettier --write \"**/*.{js,json,css,scss,less,md,ts,html,component.html}\"",
 		"start": "npm run ng -- serve",
-		"prebuild": "rimraf .angular dist && cp ../README.md ../LICENSE projects/ngx-ratio-image",
+		"prebuild": "rimraf .angular dist && cp ../LICENSE projects/ngx-ratio-image",
 		"build": "echo 'Prepare-Builds' && npm run build:lib && npm run build:app",
 		"build:lib": "npm run ng -- build --project ratioImage --configuration production",
 		"build:app": "npm run ng -- build --project ratioImageApp --configuration production",
