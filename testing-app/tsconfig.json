@@ -6,6 +6,9 @@
     "paths": {
       "ngx-ratio-image": [
         "../main/dist/ngx-ratio-image"
+      ],
+      "@angular/*": [
+        "./node_modules/@angular/*"
       ]
     },
     "strict": true,
