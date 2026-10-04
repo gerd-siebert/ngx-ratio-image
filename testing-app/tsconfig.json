@@ -4,7 +4,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "ngx-ratio-image": ["../main/dist/ngx-ratio-image"]
+      "ngx-ratio-image": [
+        "../main/projects/ngx-ratio-image/src/public-api.ts",
+        "../main/dist/ngx-ratio-image"
+      ]
     },
     "strict": true,
     "noImplicitOverride": true,
