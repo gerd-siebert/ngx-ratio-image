@@ -5,7 +5,6 @@
   "compilerOptions": {
     "paths": {
       "ngx-ratio-image": [
-        "../main/projects/ngx-ratio-image/src/public-api.ts",
         "../main/dist/ngx-ratio-image"
       ]
     },
