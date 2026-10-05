@@ -63,6 +63,8 @@
 		"@angular/build": "^21.2.19",
 		"@angular/cli": "^21.2.19",
 		"@angular/compiler-cli": "^21.2.18",
+		"@angular/platform-server": "^21.2.18",
+		"@angular/ssr": "^21.2.19",
 		"@schuchard/prettier": "5.1.0",
 		"@types/jasmine": "~4.3.0",
 		"@types/node": "20.19.41",
